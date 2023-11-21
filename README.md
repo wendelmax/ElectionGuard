@@ -26,6 +26,29 @@ Cada bloco na blockchain possui as seguintes informações:
 3. **Colégio Eleitoral:** Os blocos finais de cada seção eleitoral são utilizados como votos no colégio eleitoral. Novos blocos são gerados referenciando os blocos finais das seções eleitorais.
 4. **Níveis Superiores:** O mesmo processo se repete para os níveis superiores, como cidade, estado e nacional, formando uma hierarquia de blocos encadeados.
 
+### Descrição da Hierarquia de blocos
+
+A hierarquia do sistema de votação baseado em blockchain segue uma estrutura que organiza os votos em diferentes níveis, desde as seções eleitorais locais até votações nacionais. Cada nível representa uma entidade específica no processo eleitoral, como seções eleitorais, colégios eleitorais, cidades, estados e nacionais. Vamos explorar como funciona essa hierarquia:
+
+1. **Seção Eleitoral:**
+   - Cada seção eleitoral representa uma unidade local de votação. Os votos são registrados e encadeados em blocos dentro dessa seção, formando uma sequência de votos vinculados entre si.
+
+2. **Colégio Eleitoral:**
+   - Ao finalizar a votação em uma seção eleitoral, o último bloco dessa seção é utilizado como um voto no colégio eleitoral. Esse bloco contém um resumo dos votos da seção e é encadeado com os blocos finais de outras seções para formar um bloco de colégio eleitoral.
+
+3. **Cidade, Estado e Nacional:**
+   - O mesmo princípio é aplicado em níveis superiores, como cidade, estado e nacional. Os blocos finais dos colégios eleitorais de cidades formam votos em colégios eleitorais de estados, e assim sucessivamente, até chegar ao nível nacional.
+
+4. **Votos Hierárquicos:**
+   - Cada nível na hierarquia é representado por um bloco que contém informações específicas da entidade correspondente. Os votos são hierarquicamente encadeados, formando uma estrutura de árvore onde os resultados de seções locais contribuem para a totalização em níveis superiores.
+
+5. **Bloco de Encerramento:**
+   - Ao final de cada nível, um bloco de encerramento é gerado para indicar o término da votação nesse nível específico. Esse bloco de encerramento é fundamental para a contabilização final.
+
+Quanto à transação, no contexto de um sistema de votação baseado em blockchain, a transação é representada pelo ato de um eleitor expressar sua escolha em um voto. Cada voto é registrado como uma transação individual, e essa transação é encapsulada em um bloco da blockchain. O bloco, por sua vez, contém informações sobre a escolha do eleitor, a chave do bloco anterior e a chave resultante do hash que garante a integridade da transação.
+
+Em resumo, a hierarquia organiza os votos em diferentes níveis, e cada voto individual é tratado como uma transação que é registrada e encadeada na blockchain, formando uma estrutura hierárquica de votação. Esse design permite a totalização de votos em diferentes escalas, desde seções locais até o nível nacional.
+
 ## Processo de Validação e Contabilização
 
 ### Validação de Blocos
